@@ -33,28 +33,27 @@ const contentMap = {
 };
 
 const slideVariants = {
-  initial: (direction) => ({
+  initial: { opacity: 0, y: 100 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+  exit: {
     opacity: 0,
-    x: direction > 0 ? 100 : -100,
-  }),
-  exit: (direction) => ({
-    opacity: 0,
-    x: direction < 0 ? 100 : -100,
+    y: -100,
     transition: { duration: 0.4 },
-  }),
+  },
 };
 
 const ServicesSlider = () => {
   const keys = Object.keys(contentMap);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [direction, setDirection] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDirection(1);
       setActiveIndex((prevIndex) => (prevIndex + 1) % keys.length);
     }, 4000); // Change every 4 seconds
-
     return () => clearInterval(interval);
   }, [keys.length]);
 
@@ -64,8 +63,7 @@ const ServicesSlider = () => {
   return (
     <section className="bg-black/80 text-white py-10 px-4 md:px-20">
       <div className="flex flex-col md:flex-row max-w-7xl mx-auto gap-10 items-center min-h-[300px]">
-        {/* Image with float animation */}
-        <AnimatePresence mode="wait" custom={direction}>
+        <AnimatePresence mode="wait">
           <motion.img
             key={active.image}
             src={active.image}
@@ -73,40 +71,19 @@ const ServicesSlider = () => {
             className="rounded-xl shadow-md w-full md:w-1/2 h-auto object-cover"
             variants={slideVariants}
             initial="initial"
-            animate={{
-              opacity: 1,
-              x: 0,
-              y: [0, -10, 0],
-              transition: {
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              },
-            }}
+            animate="animate"
             exit="exit"
-            custom={direction}
           />
         </AnimatePresence>
 
-        {/* Text with opposite float animation */}
-        <AnimatePresence mode="wait" custom={direction}>
+        <AnimatePresence mode="wait">
           <motion.div
             key={active.title}
             className="space-y-4 w-full md:w-1/2 text-center md:text-left"
             variants={slideVariants}
             initial="initial"
-            animate={{
-              opacity: 1,
-              x: 0,
-              y: [0, 10, 0],
-              transition: {
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              },
-            }}
+            animate="animate"
             exit="exit"
-            custom={direction}
           >
             <h2 className="text-2xl font-bold text-white">{active.title}</h2>
             <p className="text-gray-300">{active.content}</p>

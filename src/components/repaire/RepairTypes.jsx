@@ -31,7 +31,7 @@ const fadeInUp = {
 };
 
 const RepairTypes = () => (
-  <section className="bg-black py-16 px-4 md:px-20">
+  <section className="bg-black/80 py-16 px-4 md:px-20">
     <h2 className="text-3xl font-bold text-center text-white mb-10">Our Key Services</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
       {services.map((s, i) => (

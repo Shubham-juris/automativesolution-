@@ -1,21 +1,25 @@
 import React from 'react';
-import heroImg from '../../assets/repair/hero.webp';
+import { motion } from 'framer-motion';
+import heroImg from '../../assets/repair/hero1.jpg';
 
 const RepairHero = () => {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat min-h-[90vh] flex items-center justify-center px-4 md:px-20"
+      className="relative bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center justify-center px-4 md:px-20"
       style={{ backgroundImage: `url(${heroImg})` }}
     >
-      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="relative z-10 max-w-3xl text-center text-white space-y-6">
-        <h1 className="text-4xl md:text-5xl font-bold">Reliable Truck Repair Services</h1>
-        <p className="text-lg text-gray-200">
-          We provide certified, fast, and transparent repair solutions for all commercial vehicles.
-          Keep your fleet on the road with expert care and nationwide support.
-        </p>
-      </div>
+      <motion.div
+        className="relative z-10 max-w-3xl text-center text-white space-y-6"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
+        <h1 className="text-4xl md:text-5xl font-bold">
+          Reliable Truck Repair Services
+        </h1>
+      </motion.div>
     </section>
   );
 };

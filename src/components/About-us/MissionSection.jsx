@@ -2,7 +2,6 @@ import React from 'react';
 import { Truck, Wrench, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-// Animation variant for fade-in-up
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i = 1) => ({

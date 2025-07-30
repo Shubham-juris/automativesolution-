@@ -6,9 +6,12 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinkClass = ({ isActive }) =>
-    `hover:text-yellow-400 transition ${
+    `block py-2 hover:text-yellow-400 transition ${
       isActive ? "text-yellow-400" : "text-white"
     }`;
+
+  // Close menu on link click (mobile)
+  const handleLinkClick = () => setMenuOpen(false);
 
   return (
     <header className="bg-black shadow sticky top-0 z-50">
@@ -18,7 +21,7 @@ const Navbar = () => {
           <img src={logo} alt="Logo" className="w-36 h-10 object-contain" />
         </NavLink>
 
-        {/* Center Nav */}
+        {/* Center Nav (Desktop Only) */}
         <nav className="hidden md:flex flex-1 justify-center space-x-6 text-sm font-medium">
           <NavLink to="/" className={navLinkClass}>Home</NavLink>
           <NavLink to="/about-us" className={navLinkClass}>About Us</NavLink>
@@ -26,7 +29,7 @@ const Navbar = () => {
           <NavLink to="/repair" className={navLinkClass}>Repair Services</NavLink>
         </nav>
 
-        {/* Right Contact Button */}
+        {/* Right Button (Desktop Only) */}
         <div className="hidden md:flex">
           <NavLink to="/contact">
             <button className="bg-yellow-600 text-black px-5 py-2 rounded font-medium hover:bg-yellow-400 transition">
@@ -36,9 +39,13 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden">
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden focus:outline-none"
+          aria-label="Toggle Menu"
+        >
           <svg
-            className="w-6 h-6 text-white"
+            className="w-7 h-7 text-white"
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -47,7 +54,11 @@ const Navbar = () => {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              d={
+                menuOpen
+                  ? "M6 18L18 6M6 6l12 12" // X icon
+                  : "M4 6h16M4 12h16M4 18h16" // Hamburger
+              }
             />
           </svg>
         </button>
@@ -55,12 +66,22 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2 text-sm font-medium bg-black">
-          <NavLink to="/" className={navLinkClass}>Home</NavLink>
-          <NavLink to="/about-us" className={navLinkClass}>About Us</NavLink>
-          <NavLink to="/spareparts" className={navLinkClass}>SpareParts</NavLink>
-          <NavLink to="/repair" className={navLinkClass}>Repair Services</NavLink>
-          <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
+        <div className="md:hidden px-4 pb-4 space-y-2 text-sm font-medium bg-black text-white">
+          <NavLink to="/" className={navLinkClass} onClick={handleLinkClick}>
+            Home
+          </NavLink>
+          <NavLink to="/about-us" className={navLinkClass} onClick={handleLinkClick}>
+            About Us
+          </NavLink>
+          <NavLink to="/spareparts" className={navLinkClass} onClick={handleLinkClick}>
+            SpareParts
+          </NavLink>
+          <NavLink to="/repair" className={navLinkClass} onClick={handleLinkClick}>
+            Repair Services
+          </NavLink>
+          <NavLink to="/contact" className={navLinkClass} onClick={handleLinkClick}>
+            Contact
+          </NavLink>
         </div>
       )}
     </header>

@@ -23,32 +23,36 @@ const floatLeftRight = {
 
 const WhyChooseUs = () => {
   return (
-    <motion.section
-      className="py-16 px-4 md:px-20 bg-black/80"
-      variants={floatLeftRight}
-      animate="animate"
-    >
+    <section className="py-16 px-4 md:px-20 bg-black/80">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-        {/* Image Section */}
-        <div className="md:w-1/2">
+        {/* Animated Image Section */}
+        <motion.div
+          className="md:w-1/2"
+          variants={floatLeftRight}
+          animate="animate"
+        >
           <img
             src={choose}
             alt="Why Choose Us"
             className="rounded-xl shadow-lg"
           />
-        </div>
+        </motion.div>
 
-        {/* Content Section */}
-        <div className="md:w-1/2 space-y-4 text-white">
+        {/* Animated Content Section */}
+        <motion.div
+          className="md:w-1/2 space-y-4 text-white"
+          variants={floatLeftRight}
+          animate="animate"
+        >
           <h2 className="text-3xl font-bold text-yellow-500">Why Choose Us?</h2>
           <ul className="space-y-3 list-disc list-inside text-gray-300">
             {points.map((point, idx) => (
               <li key={idx}>{point}</li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

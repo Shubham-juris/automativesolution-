@@ -35,10 +35,10 @@ const Footer = () => {
           <h4 className="text-yellow-500 text-lg font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-2 text-sm text-gray-300">
             <li><Link to="/" className="hover:text-yellow-400">Home</Link></li>
-            <li><Link to="#" className="hover:text-yellow-400">About Us</Link></li>
-            <li><Link to="#" className="hover:text-yellow-400">Solutions</Link></li>
-            <li><Link to="#" className="hover:text-yellow-400">Industries</Link></li>
-            <li><Link to="#" className="hover:text-yellow-400">Technology</Link></li>
+            <li><Link to="about-us" className="hover:text-yellow-400">About Us</Link></li>
+            <li><Link to="spareparts" className="hover:text-yellow-400">SpareParts</Link></li>
+            <li><Link to="repair" className="hover:text-yellow-400">Repair Services</Link></li>
+            <li><Link to="contact" className="hover:text-yellow-400">contact</Link></li>
           </ul>
         </motion.div>
 
@@ -58,8 +58,8 @@ const Footer = () => {
           <h4 className="text-yellow-500 text-lg font-semibold mb-3">Contact Us</h4>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>Email: support@yourcompany.com</li>
-            <li>Phone: +91 98765 43210</li>
-            <li>Address: 123 Logistics Park, Delhi, India</li>
+            <li>Phone: +91 98765 4210</li>
+            <li>Address: 123 truck Park, xyz, India</li>
           </ul>
         </motion.div>
       </motion.div>

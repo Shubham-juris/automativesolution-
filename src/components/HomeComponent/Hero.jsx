@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "../../assets/home/home.jpg";
+import video from "../../assets/home/video.mp4";
 
 const HeroSection = () => {
   return (
     <section className="relative w-full">
-      <img
-        src={img}
-        alt="Truck"
+      <video
+        src={video}
+        autoPlay
+        muted
+        loop
         className="w-full h-[300px] sm:h-[400px] md:h-[600px] object-cover drop-shadow-[0_10px_10px_rgba(0,0,0,0.6)]"
       />
 
