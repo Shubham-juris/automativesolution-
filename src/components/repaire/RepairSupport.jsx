@@ -38,13 +38,8 @@ const RepairSupport = () => (
         Have a question or need help selecting the right service? Our customer support is always ready to assist with bookings, queries, and emergencies.
       </p>
 
-      <motion.p
-        className="text-blue-500 font-semibold"
-        variants={zoomVariant}
-        animate="animate"
-      >
-        📞 Call: +91-9876543210 | 📧 Email: support@automative.in
-      </motion.p>
+      
+    
     </div>
   </section>
 );

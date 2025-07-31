@@ -57,9 +57,7 @@ const Footer = () => {
         <motion.div custom={4} variants={fadeUp}>
           <h4 className="text-yellow-500 text-lg font-semibold mb-3">Contact Us</h4>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>Email: support@yourcompany.com</li>
-            <li>Phone: +91 98765 4210</li>
-            <li>Address: 123 truck Park, xyz, India</li>
+            <li>Address: Alberta ,canada</li>
           </ul>
         </motion.div>
       </motion.div>

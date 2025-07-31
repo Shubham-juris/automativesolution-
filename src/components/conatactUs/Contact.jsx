@@ -28,9 +28,7 @@ const ContactPage = () => {
             />
             <div className="absolute inset-0 bg-black/80 rounded-xl flex flex-col items-center justify-center text-center px-6 py-10">
               <h3 className="text-2xl font-semibold mb-4 text-gray-100">Contact Information</h3>
-              <p className="text-gray-200">📍 NH 44, Industrial Area, Ludhiana, Punjab, India</p>
-              <p className="text-gray-200">📞 +91 98765 43210</p>
-              <p className="text-gray-200">✉️ support@automotivesolution.com</p>
+              <p className="text-gray-200">📍 Alberta,Canada</p>
             </div>
           </div>
         </div>

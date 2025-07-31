@@ -13,6 +13,12 @@ import TyreAlignmentPage from "../components/repaire/cardpage/TyreAlignmentPage"
 import ElectricalSystemPage from "../components/repaire/cardpage/ElectricalSystemPage";
 import CoolingRepairPage from "../components/repaire/cardpage/CoolingRepairPage";
 import SuspensionRebuildPage from "../components/repaire/cardpage/SuspensionRebuildPage";
+import BrakeSystems from "../components/spare-parts/spareCards/BrakeSystems";
+import EngineParts from "../components/spare-parts/spareCards/EngineParts";
+import FiltersPage from "../components/spare-parts/spareCards/FiltersPage";
+import SuspensionPage from "../components/spare-parts/spareCards/SuspensionPage";
+import TransmissionPage from "../components/spare-parts/spareCards/TransmissionPage";
+import LightingPage from "../components/spare-parts/spareCards/LightingPage";
 
 const PageRoutes = () => {
   return (
@@ -32,6 +38,14 @@ const PageRoutes = () => {
         <Route path="electrical-check" element={<ElectricalSystemPage />} />
         <Route path="ac-cabin" element={<CoolingRepairPage />} />
         <Route path="suspension-rebuild" element={<SuspensionRebuildPage />} />
+
+        <Route path="brake-systems" element={<BrakeSystems />} />
+        <Route path="engine-parts" element={<EngineParts />} />
+        <Route path="filters" element={<FiltersPage />} />
+        <Route path="lighting" element={<LightingPage />} />
+        <Route path="suspension" element={<SuspensionPage />} />
+        <Route path="transmission" element={<TransmissionPage/>} />
+
       </Routes>
     </>
   );

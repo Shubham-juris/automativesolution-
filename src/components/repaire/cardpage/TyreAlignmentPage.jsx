@@ -5,7 +5,6 @@ import alignmentImg from "../../../assets/repair/img3.jpg";
 const TyreAlignmentPage = () => {
   return (
     <div className="bg-black/80 text-white">
-      {/* Hero Section */}
       <section className="relative bg-black text-white py-20 px-4 md:px-20">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Tyre & Wheel Alignment</h1>
@@ -15,10 +14,8 @@ const TyreAlignmentPage = () => {
         </div>
       </section>
 
-      {/* Service Details */}
       <section className="py-16 px-4 md:px-20">
         <div className="max-w-6xl mx-auto space-y-12 text-gray-300">
-          {/* Tyre Services */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <img
               src={tyreImg}
@@ -33,7 +30,6 @@ const TyreAlignmentPage = () => {
             </div>
           </div>
 
-          {/* Wheel Alignment */}
           <div className="grid md:grid-cols-2 gap-8 items-center md:flex-row-reverse">
             <img
               src={alignmentImg}
@@ -48,7 +44,6 @@ const TyreAlignmentPage = () => {
             </div>
           </div>
 
-          {/* Highlight */}
           <div className="text-center mt-10">
             <p className="text-xl font-medium text-blue-500">
               ✅ High-performance tyres, digital alignment & expert support included.

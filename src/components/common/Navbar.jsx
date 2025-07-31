@@ -10,18 +10,15 @@ const Navbar = () => {
       isActive ? "text-yellow-400" : "text-white"
     }`;
 
-  // Close menu on link click (mobile)
   const handleLinkClick = () => setMenuOpen(false);
 
   return (
     <header className="bg-black shadow sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
         <NavLink to="/" className="flex items-center space-x-3">
           <img src={logo} alt="Logo" className="w-36 h-10 object-contain" />
         </NavLink>
 
-        {/* Center Nav (Desktop Only) */}
         <nav className="hidden md:flex flex-1 justify-center space-x-6 text-sm font-medium">
           <NavLink to="/" className={navLinkClass}>Home</NavLink>
           <NavLink to="/about-us" className={navLinkClass}>About Us</NavLink>
@@ -29,7 +26,6 @@ const Navbar = () => {
           <NavLink to="/repair" className={navLinkClass}>Repair Services</NavLink>
         </nav>
 
-        {/* Right Button (Desktop Only) */}
         <div className="hidden md:flex">
           <NavLink to="/contact">
             <button className="bg-yellow-600 text-black px-5 py-2 rounded font-medium hover:bg-yellow-400 transition">
@@ -38,7 +34,6 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden focus:outline-none"
@@ -56,8 +51,8 @@ const Navbar = () => {
               strokeLinejoin="round"
               d={
                 menuOpen
-                  ? "M6 18L18 6M6 6l12 12" // X icon
-                  : "M4 6h16M4 12h16M4 18h16" // Hamburger
+                  ? "M6 18L18 6M6 6l12 12" 
+                  : "M4 6h16M4 12h16M4 18h16" 
               }
             />
           </svg>
