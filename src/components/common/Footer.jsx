@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import logo from "../../assets/navbar/logo.png";
+import logo from "../../assets/navbar/img1.jpg";
 
 // Animation variants
 const fadeUp = {

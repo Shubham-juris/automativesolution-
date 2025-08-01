@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/navbar/logo.png";
+import logo from "../../assets/navbar/img1.jpg";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
