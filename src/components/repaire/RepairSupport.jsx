@@ -27,7 +27,7 @@ const RepairSupport = () => (
   <section className="py-16 bg-white px-4 md:px-20">
     <div className="max-w-4xl mx-auto text-center space-y-6">
       <motion.h2
-        className="text-3xl font-bold"
+        className="text-3xl text-red-600 font-bold"
         variants={flipVariant}
         animate="animate"
       >

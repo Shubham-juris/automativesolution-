@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import img1 from "../../assets/home/img1.webp";
+import img1 from "../../assets/home/img1.jpg";
 import img2 from "../../assets/home/img2.jpg";
 import img3 from "../../assets/home/img3.jpg";
 import img4 from "../../assets/home/img4.avif";
@@ -33,16 +33,16 @@ const contentMap = {
 };
 
 const slideVariants = {
-  initial: { opacity: 0, y: 100 },
+  initial: { opacity: 0, x: 100 },
   animate: {
     opacity: 1,
-    y: 0,
-    transition: { duration: 0.6 },
+    x: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
   },
   exit: {
     opacity: 0,
-    y: -100,
-    transition: { duration: 0.4 },
+    x: -100,
+    transition: { duration: 0.4, ease: "easeIn" },
   },
 };
 
@@ -52,8 +52,8 @@ const ServicesSlider = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % keys.length);
-    }, 4000); // Change every 4 seconds
+      setActiveIndex((prev) => (prev + 1) % keys.length);
+    }, 4000);
     return () => clearInterval(interval);
   }, [keys.length]);
 
@@ -63,7 +63,7 @@ const ServicesSlider = () => {
   return (
     <section className="bg-black/80 text-white py-10 px-4 md:px-20">
       <div className="flex flex-col md:flex-row max-w-7xl mx-auto gap-10 items-center min-h-[300px]">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.img
             key={active.image}
             src={active.image}
@@ -76,7 +76,7 @@ const ServicesSlider = () => {
           />
         </AnimatePresence>
 
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={active.title}
             className="space-y-4 w-full md:w-1/2 text-center md:text-left"
