@@ -1,5 +1,5 @@
 import React from 'react';
-import acImg from '../../../assets/repair/img4.jpeg';
+import acImg from '../../../assets/repair/ac.jpeg';
 
 const CoolingRepairPage = () => {
   return (

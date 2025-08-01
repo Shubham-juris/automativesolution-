@@ -1,6 +1,6 @@
 import React from "react";
 import brake1 from "../../../assets/repair/img2.jpg";
-import brake2 from "../../../assets/repair/img2.jpg";
+import brake2 from "../../../assets/repair/brake2.webp";
 
 const BrakeSuspensionPage = () => {
   return (

@@ -1,6 +1,7 @@
 import React from "react";
 import engineimg1 from '../../../assets/repair/img1.avif';
-import engineimg2 from '../../../assets/repair/img1.avif';
+import engine1 from "../../../assets/repair/engine1.webp"
+import engineimg2 from '../../../assets/repair/engine2.jpg';
 
 const EngineDiagnostics = () => {
   return (
@@ -46,7 +47,7 @@ const EngineDiagnostics = () => {
         {/* Images */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <img
-            src={engineimg1}
+            src={engine1}
             alt="Engine diagnostics"
             className="rounded-xl shadow-lg w-full h-64 object-cover"
           />

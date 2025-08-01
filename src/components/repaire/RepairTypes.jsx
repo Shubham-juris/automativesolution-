@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import electrical from "../../assets/repair/img5.jpg";
 import engine from '../../assets/repair/img1.avif';
-import ac from '../../assets/repair/img4.jpeg';
+import ac from '../../assets/repair/img4.jpg';
 import tire from '../../assets/repair/img3.jpg';
 import brake from '../../assets/repair/img2.jpg';
 import suspension from '../../assets/repair/img6.jpg';

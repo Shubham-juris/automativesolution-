@@ -1,5 +1,5 @@
 import React from 'react';
-import transmissionImage from '../../../assets/spareParts/Transmission.jpeg'; 
+import transmissionImage from '../../../assets/spareParts/Trans.jpg'; 
 
 const TransmissionPage = () => {
   return (
