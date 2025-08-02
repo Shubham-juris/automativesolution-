@@ -22,7 +22,7 @@ const RepairCTA = () => (
         trucks.
       </p>
       <Link to="/Booking">
-        <button className="bg-white text-black px-6 py-3 font-semibold rounded-xl hover:bg-blue-500 transition">
+        <button className="bg-white text-black px-6 py-3 font-semibold rounded-xl hover:bg-blue-500 transition cursor-pointer">
           Book a Service
         </button>
       </Link>

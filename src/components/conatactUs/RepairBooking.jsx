@@ -133,7 +133,7 @@ const RepairBooking = () => {
 
             <button
               type="submit"
-              className="w-full bg-yellow-500 text-black font-semibold py-3 rounded-lg hover:bg-yellow-600 transition duration-300"
+              className="w-full bg-yellow-500 text-black font-semibold py-3 rounded-lg hover:bg-yellow-600 transition duration-300 cursor-pointer"
             >
               Submit Request
             </button>

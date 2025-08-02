@@ -102,7 +102,7 @@ const PartsInquiryForm = () => {
 
         <button
           type="submit"
-          className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full"
+          className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full cursor-pointer"
         >
           Submit Inquiry
         </button>

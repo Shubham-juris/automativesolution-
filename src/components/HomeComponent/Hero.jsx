@@ -21,11 +21,12 @@ const HeroSection = () => {
           One-stop destination for old truck sales, spare parts & repair
           services.
         </p>
-        <Link to="/Repair">
-          <button className="mt-6 px-6 py-3 bg-yellow-600 text-black font-semibold rounded hover:bg-yellow-400 transition">
-            Explore Services
-          </button>
-        </Link>
+      <Link to="/Repair">
+  <button className="mt-6 px-6 py-3 bg-yellow-600 text-black font-semibold rounded hover:bg-yellow-400 transition cursor-pointer">
+    Explore Services
+  </button>
+</Link>
+
       </div>
     </section>
   );

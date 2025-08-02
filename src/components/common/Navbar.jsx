@@ -74,7 +74,7 @@ const Navbar = () => {
           <NavLink to="/repair" className={navLinkClass} onClick={handleLinkClick}>
             Repair Services
           </NavLink>
-          <NavLink to="/contact" className={navLinkClass} onClick={handleLinkClick}>
+          <NavLink to="/contact" className= {navLinkClass} onClick={handleLinkClick}>
             Contact
           </NavLink>
         </div>

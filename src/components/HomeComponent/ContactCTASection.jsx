@@ -7,7 +7,7 @@ const ContactCTASection = () => {
       <h2 className="text-3xl font-bold mb-4">Need Help or Have Questions?</h2>
       <p className="mb-6">Our team is here to assist you. Reach out to us anytime!</p>
       <Link to="/contact">
-        <button className="px-6 py-3 bg-black text-white rounded hover:bg-gray-800 transition">
+        <button className="px-6 py-3 bg-black text-white rounded hover:bg-gray-800 transition cursor-pointer">
           Contact Us
         </button>
       </Link>
